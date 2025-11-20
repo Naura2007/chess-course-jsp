@@ -10,7 +10,6 @@ public class User {
     private String role;
     private LocalDateTime createdAt;
     
-    // Constructors
     public User() {}
     
     public User(String name, String email, String password, String role) {
@@ -20,7 +19,6 @@ public class User {
         this.role = role;
     }
     
-    // Getters & Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     

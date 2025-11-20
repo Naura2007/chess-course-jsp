@@ -26,7 +26,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Give Feedback</h1>
+        <h1>⫘ Give Feedback</h1>
         <nav>
             <a href="my-feedback" style="color: white; margin: 0 15px;">Back to My Feedback</a>
             <a href="user-dashboard.jsp" style="color: white; margin: 0 15px;">Dashboard</a>
@@ -34,7 +34,6 @@
     </header>
 
     <div class="container">
-        <!-- Error Message -->
         <%
             String error = request.getParameter("error");
             if (error != null) {
@@ -112,19 +111,16 @@
     </div>
 
     <script>
-        // Character counter for message
         document.getElementById('message').addEventListener('input', function() {
             const count = this.value.length;
             document.getElementById('message-count').textContent = count + '/1000 characters';
         });
 
-        // Auto-resize textarea
         document.getElementById('message').addEventListener('input', function() {
             this.style.height = 'auto';
             this.style.height = (this.scrollHeight) + 'px';
         });
 
-        // Form validation
         document.querySelector('form')?.addEventListener('submit', function(e) {
             const courseId = document.getElementById('courseId').value;
             const message = document.getElementById('message').value.trim();

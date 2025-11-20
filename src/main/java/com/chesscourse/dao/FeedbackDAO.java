@@ -10,7 +10,7 @@ public class FeedbackDAO {
     
     // Create new feedback
     public boolean create(Feedback feedback) {
-        String sql = "INSERT INTO feedback (user_id, course_id, message) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO feedbacks (user_id, course_id, message) VALUES (?, ?, ?)";
         
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -28,7 +28,7 @@ public class FeedbackDAO {
     
     // Delete feedback
     public boolean delete(int feedbackId) {
-        String sql = "DELETE FROM feedback WHERE id = ?";
+        String sql = "DELETE FROM feedbacks WHERE id = ?";
         
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -45,7 +45,7 @@ public class FeedbackDAO {
     public List<Feedback> getFeedbackByUserId(int userId) {
         List<Feedback> feedbackList = new ArrayList<>();
         String sql = "SELECT f.*, c.title as course_title, u.name as user_name " +
-                     "FROM feedback f " +
+                     "FROM feedbacks f " +
                      "JOIN courses c ON f.course_id = c.id " +
                      "JOIN users u ON f.user_id = u.id " +
                      "WHERE f.user_id = ? " +
@@ -71,7 +71,7 @@ public class FeedbackDAO {
     public List<Feedback> getAllFeedback() {
         List<Feedback> feedbackList = new ArrayList<>();
         String sql = "SELECT f.*, c.title as course_title, u.name as user_name " +
-                     "FROM feedback f " +
+                     "FROM feedbacks f " +
                      "JOIN courses c ON f.course_id = c.id " +
                      "JOIN users u ON f.user_id = u.id " +
                      "ORDER BY f.created_at DESC";

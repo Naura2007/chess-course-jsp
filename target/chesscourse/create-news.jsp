@@ -23,7 +23,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Create News Post</h1>
+        <h1>⫘ Create News Post</h1>
         <nav>
             <a href="admin-news" style="color: white; margin: 0 15px;">Back to News</a>
             <a href="admin-dashboard.jsp" style="color: white; margin: 0 15px;">Dashboard</a>

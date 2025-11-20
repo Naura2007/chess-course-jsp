@@ -11,6 +11,7 @@ C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\model\News.java
 C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\util\DatabaseConnection.java
 C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\dao\CourseDAO.java
 C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\controller\AdminCourseServlet.java
+C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\controller\LogoutServlet.java
 C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\model\Course.java
 C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\model\Enrollment.java
 C:\Users\User\chess-course-jsp\src\main\java\com\chesscourse\controller\AdminFeedbackServlet.java

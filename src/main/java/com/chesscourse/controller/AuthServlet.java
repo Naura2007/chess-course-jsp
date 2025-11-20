@@ -42,7 +42,7 @@ public class AuthServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-        // Handle logout
+        // Handle logout        
         HttpSession session = request.getSession();
         session.invalidate();
         response.sendRedirect("index.jsp");

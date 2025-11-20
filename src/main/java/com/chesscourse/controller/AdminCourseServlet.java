@@ -20,7 +20,6 @@ public class AdminCourseServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        // Check if user is admin
         HttpSession session = request.getSession();
         com.chesscourse.model.User user = (com.chesscourse.model.User) session.getAttribute("user");
         
@@ -29,7 +28,6 @@ public class AdminCourseServlet extends HttpServlet {
             return;
         }
         
-        // Get all courses
         List<Course> courses = courseDAO.findAll();
         request.setAttribute("courses", courses);
         

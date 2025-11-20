@@ -108,10 +108,10 @@ public class CourseServlet extends HttpServlet {
             
             // Save to database
             if (courseDAO.create(course)) {
-                System.out.println("✅ Course created successfully!");
+                System.out.println("Course created successfully!");
                 response.sendRedirect("admin-courses?success=Course created successfully");
             } else {
-                System.out.println("❌ Failed to create course");
+                System.out.println("Failed to create course");
                 response.sendRedirect("create-course.jsp?error=Failed to create course");
             }
             

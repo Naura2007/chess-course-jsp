@@ -21,7 +21,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Create New Course</h1>
+        <h1>⫘ Create New Course</h1>
         <nav>
             <a href="admin-courses.jsp" style="color: white; margin: 0 15px;">Back to Courses</a>
             <a href="admin-dashboard.jsp" style="color: white; margin: 0 15px;">Dashboard</a>
@@ -79,7 +79,6 @@
     </div>
 
     <script>
-        // Set min datetime to current time
         const now = new Date();
         const timezoneOffset = now.getTimezoneOffset() * 60000;
         const localISOTime = new Date(now - timezoneOffset).toISOString().slice(0, 16);

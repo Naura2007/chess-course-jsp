@@ -8,12 +8,9 @@ public class Feedback {
     private int courseId;
     private String message;
     private LocalDateTime createdAt;
-    
-    // Additional fields for display
     private String courseTitle;
     private String userName;
     
-    // Constructors
     public Feedback() {}
     
     public Feedback(int userId, int courseId, String message) {
@@ -22,7 +19,6 @@ public class Feedback {
         this.message = message;
     }
     
-    // Getters & Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     
@@ -38,7 +34,6 @@ public class Feedback {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
     
-    // Additional getters & setters
     public String getCourseTitle() { return courseTitle; }
     public void setCourseTitle(String courseTitle) { this.courseTitle = courseTitle; }
     

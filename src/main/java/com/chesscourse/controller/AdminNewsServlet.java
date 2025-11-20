@@ -19,7 +19,6 @@ public class AdminNewsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        // Check if user is admin
         HttpSession session = request.getSession();
         com.chesscourse.model.User user = (com.chesscourse.model.User) session.getAttribute("user");
         
@@ -28,7 +27,6 @@ public class AdminNewsServlet extends HttpServlet {
             return;
         }
         
-        // Get all news
         request.setAttribute("newsList", newsDAO.findAll());
         request.getRequestDispatcher("admin-news.jsp").forward(request, response);
     }

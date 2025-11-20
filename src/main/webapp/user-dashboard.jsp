@@ -17,11 +17,28 @@
         .stat-card { background: #f8f9fa; padding: 15px; border-radius: 6px; text-align: center; border-left: 4px solid #ADD8E6; }
         .stat-number { font-size: 2em; font-weight: bold; color: #2c3e50; }
         .stat-label { color: #666; font-size: 0.9em; }
+
+        .logout-container {
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .logout-btn {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 0;
+            display: inline-block;
+        }
+
+        .logout-btn:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>♟️ User Dashboard</h1>
+        <h1>User Dashboard</h1>
         
         <div class="user-info">
             <%
@@ -42,9 +59,7 @@
             <p>Manage your chess learning journey. Browse courses, track your enrollments, and stay updated with news!</p>
         </div>
 
-        <!-- Quick Stats -->
         <%
-            // DECLARE VARIABLES OUTSIDE THE BLOCK
             int enrollmentCount = 0;
             int feedbackCount = 0;
             
@@ -56,74 +71,62 @@
                 feedbackCount = feedbackDAO.getFeedbackByUserId(user.getId()).size();
             }
         %>
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number"><%= enrollmentCount %></div>
-                    <div class="stat-label">Courses Enrolled</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Completed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number"><%= feedbackCount %></div>
-                    <div class="stat-label">Feedback Given</div>
-                </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number"><%= enrollmentCount %></div>
+                <div class="stat-label">Courses Enrolled</div>
             </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><%= feedbackCount %></div>
+                <div class="stat-label">Feedback Given</div>
+            </div>
+        </div>
         
         <div class="menu">
-            <a href="courses">
-                <div>📚</div>
-                Browse Courses
-            </a>
-            <a href="my-enrollments">
-                <div>🎯</div>
-                My Enrollments
-            </a>
-            <a href="my-feedback">
-                <div>💬</div>
-                My Feedback
-            </a>
-            <a href="news">
-                <div>📰</div>
-                News & Updates
-            </a>
-            <a href="login">
-                <div>🚪</div>
-                Logout
-            </a>
+            <a href="courses">Browse Courses</a>
+            <a href="my-enrollments">My Enrollments</a>
+            <a href="my-feedback">My Feedback</a>
+            <a href="news">News & Updates</a>
         </div>
 
-        <!-- Recent Activity Section -->
         <div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
             <h3 style="color: #2c3e50; margin-top: 0;">Quick Actions</h3>
             <%
-                // NOW VARIABLES ARE ACCESSIBLE HERE
                 if (enrollmentCount > 0) {
             %>
-                <p>🎯 You're enrolled in <strong><%= enrollmentCount %></strong> courses</p>
+                <p>You're enrolled in <strong><%= enrollmentCount %></strong> courses</p>
                 <p><a href="my-enrollments" style="color: #ADD8E6; text-decoration: none; font-weight: bold;">→ View your enrollments</a></p>
             <%
                 } else {
             %>
-                <p>📚 You haven't enrolled in any courses yet</p>
+                <p>You haven't enrolled in any courses yet</p>
                 <p><a href="courses" style="color: #ADD8E6; text-decoration: none; font-weight: bold;">→ Browse available courses</a></p>
             <%
                 }
                 
                 if (feedbackCount > 0) {
             %>
-                <p>💬 You've given <strong><%= feedbackCount %></strong> feedback</p>
+                <p>You've given <strong><%= feedbackCount %></strong> feedback</p>
                 <p><a href="my-feedback" style="color: #ADD8E6; text-decoration: none; font-weight: bold;">→ View your feedback</a></p>
             <%
                 } else {
             %>
-                <p>💬 You haven't given any feedback yet</p>
+                <p>You haven't given any feedback yet</p>
                 <p><a href="give-feedback.jsp" style="color: #ADD8E6; text-decoration: none; font-weight: bold;">→ Give your first feedback</a></p>
             <%
                 }
             %>
         </div>
+
+        <div class="logout-container">
+            <a href="logout" class="logout-btn">Logout</a>
+        </div>
+        
     </div>
 </body>
 </html>

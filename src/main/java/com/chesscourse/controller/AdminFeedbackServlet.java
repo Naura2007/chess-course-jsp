@@ -19,7 +19,6 @@ public class AdminFeedbackServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        // Check if user is admin
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         
@@ -28,7 +27,6 @@ public class AdminFeedbackServlet extends HttpServlet {
             return;
         }
         
-        // Get all feedback
         var feedbackList = feedbackDAO.getAllFeedback();
         request.setAttribute("feedbackList", feedbackList);
         
@@ -42,7 +40,6 @@ public class AdminFeedbackServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         
-        // Check if user is admin
         if (user == null || !"admin".equals(user.getRole())) {
             response.sendRedirect("login.jsp?error=Access denied");
             return;

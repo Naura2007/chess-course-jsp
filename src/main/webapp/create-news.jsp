@@ -23,7 +23,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Create News Post</h1>
+        <h1>⫘ Create News Post</h1>
         <nav>
             <a href="admin-news" style="color: white; margin: 0 15px;">Back to News</a>
             <a href="admin-dashboard.jsp" style="color: white; margin: 0 15px;">Dashboard</a>
@@ -31,7 +31,6 @@
     </header>
 
     <div class="container">
-        <!-- Error Message -->
         <%
             String error = request.getParameter("error");
             if (error != null) {
@@ -70,25 +69,21 @@
     </div>
 
     <script>
-        // Character counter for title
         document.getElementById('title').addEventListener('input', function() {
             const count = this.value.length;
             document.getElementById('title-count').textContent = count + '/200 characters';
         });
 
-        // Character counter for content
         document.getElementById('content').addEventListener('input', function() {
             const count = this.value.length;
             document.getElementById('content-count').textContent = count + '/2000 characters';
         });
 
-        // Auto-resize textarea
         document.getElementById('content').addEventListener('input', function() {
             this.style.height = 'auto';
             this.style.height = (this.scrollHeight) + 'px';
         });
 
-        // Form validation
         document.querySelector('form').addEventListener('submit', function(e) {
             const title = document.getElementById('title').value.trim();
             const content = document.getElementById('content').value.trim();

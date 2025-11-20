@@ -15,7 +15,6 @@ public class News {
         this.content = content;
     }
     
-    // Getters & Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     

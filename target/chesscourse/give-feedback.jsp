@@ -26,7 +26,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Give Feedback</h1>
+        <h1>⫘ Give Feedback</h1>
         <nav>
             <a href="my-feedback" style="color: white; margin: 0 15px;">Back to My Feedback</a>
             <a href="user-dashboard.jsp" style="color: white; margin: 0 15px;">Dashboard</a>

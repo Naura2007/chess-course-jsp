@@ -19,7 +19,6 @@ public class AdminUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        // Check if user is admin
         HttpSession session = request.getSession();
         User adminUser = (User) session.getAttribute("user");
         
@@ -28,7 +27,6 @@ public class AdminUserServlet extends HttpServlet {
             return;
         }
         
-        // Get all users
         var users = userDAO.getAllUsers();
         request.setAttribute("users", users);
         
@@ -42,7 +40,6 @@ public class AdminUserServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User adminUser = (User) session.getAttribute("user");
         
-        // Check if user is admin
         if (adminUser == null || !"admin".equals(adminUser.getRole())) {
             response.sendRedirect("login.jsp?error=Access denied");
             return;
@@ -61,7 +58,6 @@ public class AdminUserServlet extends HttpServlet {
         try {
             int userId = Integer.parseInt(request.getParameter("id"));
             
-            // Prevent admin from deleting themselves
             if (userId == adminUser.getId()) {
                 response.sendRedirect("admin-users?error=Cannot delete your own account");
                 return;

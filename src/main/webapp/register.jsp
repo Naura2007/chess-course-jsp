@@ -124,6 +124,10 @@
     </style>
 </head>
 <body>
+    <div class="hero-logo">
+        <img src="images/logo.png" alt="Chess Course Logo">
+    </div>
+
     <div class="register-container">
         <h2>Create Account</h2>
         
@@ -191,7 +195,6 @@
             return true;
         }
         
-        // Real-time password confirmation check
         document.getElementById('confirmPassword').addEventListener('input', function() {
             var password = document.getElementById('password').value;
             var confirmPassword = this.value;

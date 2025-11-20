@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>♟️ Admin Dashboard</h1>
+        <h1>⫘ Admin Dashboard</h1>
         
         <div class="user-info">
             <%
@@ -80,33 +80,33 @@
         
         <div class="menu">
             <a href="admin-courses">
-                <div>📚</div>
+                <div></div>
                 Manage Courses
             </a>
             <a href="admin-news">
-                <div>📢</div>
+                <div></div>
                 Manage News
             </a>
             <a href="admin-users">
-                <div>👥</div>
+                <div></div>
                 Manage Users
             </a>
             <a href="admin-feedback">
-                <div>💬</div>
+                <div></div>
                 Manage Feedback
             </a>
             <a href="courses">
-                <div>👀</div>
+                <div></div>
                 View Courses
             </a>
             <a href="news">
-                <div>📰</div>
+                <div></div>
                 View News
             </a>
-            <a href="login">
-                <div>🚪</div>
-                Logout
-            </a>
+        </div>
+
+        <div class="logout-container">
+            <a href="logout" class="logout-btn">Logout</a>
         </div>
     </div>
 </body>

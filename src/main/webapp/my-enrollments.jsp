@@ -25,7 +25,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ My Course Enrollments</h1>
+        <h1>⫘ My Course Enrollments</h1>
         <div class="nav-links">
             <a href="user-dashboard.jsp">Dashboard</a>
             <a href="courses">Browse Courses</a>

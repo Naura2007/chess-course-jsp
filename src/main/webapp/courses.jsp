@@ -43,7 +43,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Available Chess Courses</h1>
+        <h1>⫘ Available Chess Courses</h1>
         <div class="nav-links">
             <a href="index.jsp">Home</a>
             <c:choose>
@@ -122,7 +122,6 @@
                     
                     <p>${course.description}</p>
                     
-                    <!-- ENROLLMENT SECTION -->
                     <jsp:useBean id="enrollmentDAO" class="com.chesscourse.dao.EnrollmentDAO"/>
                     
                     <c:choose>
@@ -162,7 +161,7 @@
                                 </c:when>
                                 <c:when test="${enrollmentCount >= course.quota}">
                                     <button class="enroll-btn" disabled>
-                                        ❌ Course Full
+                                        Course Full
                                     </button>
                                     <div class="quota-info">
                                         All ${course.quota} spots are filled
@@ -202,8 +201,6 @@
         function confirmDelete(courseId) {
             if (confirm('Are you sure you want to delete this course?')) {
                 alert('Delete feature coming soon! Course ID: ' + courseId);
-                // TODO: Implement delete functionality
-                // window.location.href = 'courses?action=delete&id=' + courseId;
             }
         }
     </script>

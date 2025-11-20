@@ -24,7 +24,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Manage Users - Admin Panel</h1>
+        <h1>⫘ Manage Users - Admin Panel</h1>
         <nav>
             <a href="admin-dashboard.jsp" style="color: white; margin: 0 15px;">Dashboard</a>
             <a href="admin-courses" style="color: white; margin: 0 15px;">Manage Courses</a>

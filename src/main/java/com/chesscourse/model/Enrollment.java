@@ -7,12 +7,9 @@ public class Enrollment {
     private int userId;
     private int courseId;
     private LocalDateTime enrolledAt;
-    
-    // Additional fields for display
     private String courseTitle;
     private String coachName;
     
-    // Constructors
     public Enrollment() {}
     
     public Enrollment(int userId, int courseId) {
@@ -20,7 +17,6 @@ public class Enrollment {
         this.courseId = courseId;
     }
     
-    // Getters & Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     
@@ -33,7 +29,6 @@ public class Enrollment {
     public LocalDateTime getEnrolledAt() { return enrolledAt; }
     public void setEnrolledAt(LocalDateTime enrolledAt) { this.enrolledAt = enrolledAt; }
     
-    // Additional getters & setters
     public String getCourseTitle() { return courseTitle; }
     public void setCourseTitle(String courseTitle) { this.courseTitle = courseTitle; }
     

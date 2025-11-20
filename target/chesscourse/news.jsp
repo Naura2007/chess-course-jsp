@@ -21,7 +21,7 @@
 </head>
 <body>
     <header>
-        <h1>♟️ Chess Course News</h1>
+        <h1>⫘ Chess Course News</h1>
         <div class="nav-links">
             <a href="index.jsp">Home</a>
             <a href="courses">View Courses</a>

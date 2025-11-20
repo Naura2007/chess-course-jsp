@@ -73,7 +73,7 @@ public class FeedbackServlet extends HttpServlet {
             Feedback feedback = new Feedback(user.getId(), courseId, message);
             
             if (feedbackDAO.create(feedback)) {
-                System.out.println("✅ Feedback created successfully!");
+                System.out.println("Feedback created successfully!");
                 response.sendRedirect("my-feedback?success=Feedback submitted successfully");
             } else {
                 response.sendRedirect("give-feedback.jsp?error=Failed to submit feedback");
@@ -92,7 +92,7 @@ public class FeedbackServlet extends HttpServlet {
             int feedbackId = Integer.parseInt(request.getParameter("id"));
             
             if (feedbackDAO.delete(feedbackId)) {
-                System.out.println("✅ Feedback deleted successfully!");
+                System.out.println("Feedback deleted successfully!");
                 response.sendRedirect("my-feedback?success=Feedback deleted successfully");
             } else {
                 response.sendRedirect("my-feedback?error=Failed to delete feedback");

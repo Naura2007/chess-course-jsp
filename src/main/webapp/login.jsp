@@ -16,6 +16,10 @@
     </style>
 </head>
 <body>
+    <div class="hero-logo">
+        <img src="images/logo.png" alt="Chess Course Logo">
+    </div>
+
     <div class="login-container">
         <h2>Login</h2>
         

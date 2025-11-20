@@ -20,3 +20,4 @@ com\chesscourse\controller\AdminCourseServlet.class
 com\chesscourse\dao\CourseDAO.class
 com\chesscourse\model\Enrollment.class
 com\chesscourse\model\User.class
+com\chesscourse\controller\LogoutServlet.class

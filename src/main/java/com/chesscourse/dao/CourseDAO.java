@@ -37,13 +37,13 @@ public class CourseDAO {
             ResultSet rs = stmt.executeQuery();
             
             if (rs.next()) {
-                System.out.println("✅ Found course with ID: " + id);
+                System.out.println(" Found course with ID: " + id);
                 return extractCourseFromResultSet(rs);
             } else {
-                System.out.println("❌ No course found with ID: " + id);
+                System.out.println(" No course found with ID: " + id);
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error finding course by ID: " + e.getMessage());
+            System.out.println(" Error finding course by ID: " + e.getMessage());
             e.printStackTrace();
         }
         return null;
